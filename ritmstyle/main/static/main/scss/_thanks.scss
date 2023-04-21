@@ -1,0 +1,37 @@
+.thanks{
+    &__content{
+        margin-bottom: clamp(1.25rem, calc(0.06rem + 5.95vw), 3.75rem);;
+    }
+
+    &__title{
+        margin-bottom: clamp(0.938rem, calc(-0.402rem + 6.7vw), 3.75rem);
+    }
+
+    &__text{
+        text-align: center;
+    }
+
+    &__info{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__img{
+        max-width: 600px;
+        height: 300px;
+
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    &__text{
+        @include adaptiv-font(20, 18);
+        max-width: 600px;
+    }
+}

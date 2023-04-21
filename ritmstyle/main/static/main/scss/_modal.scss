@@ -1,0 +1,101 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+
+    .form-errors{
+        font-size: 18px;
+        text-align: center;
+        color: #ee1818;
+        font-weight: 600;
+    }
+
+    &__box{
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        padding: 30px 10px;
+        transform: scale(0);
+        transition: transform .8s;
+        position: relative;
+        border-radius: 20px;
+    }
+
+    &__info{
+        background-color: var(---sub-color);
+        max-width: 800px;
+        padding: clamp(1.125rem, calc(0.852rem + 1.36vw), 1.875rem);
+        border-radius: 20px;
+        position: relative;
+    }
+    
+    &__title{
+        padding-top: 40px;
+        margin-bottom: clamp(1.25rem, calc(0.568rem + 3.41vw), 3.125rem);
+    }
+
+    &__button{
+        width: 170px;
+        margin: 20px auto 0;
+        height: 34px;
+        font-size: 20px;
+        line-height: 2px;
+    }
+
+    &__close-button{
+        position: absolute;
+        right: clamp(0.625rem, calc(0.17rem + 2.27vw), 1.875rem);
+        top: 30px;
+        width: 30px;
+        min-height: 30px;
+        cursor: pointer;
+
+        span::after,
+        span::before{
+            content: "";
+            width: 100%;
+            height: 3px;
+            right: 0;
+            top: 8px;
+            position: absolute;
+            background-color: var(---white-color);
+            transition: box-shadow .3s ease;
+        }
+
+        span::after{
+            transform: rotate(-45deg);
+        }
+
+        span::before{
+            transform: rotate(45deg);
+        }
+
+        @media (any-hover: hover) {
+            &:hover{ 
+                span::before,
+                span::after{
+                    box-shadow: 0px 0px 20px 2px #fff;
+                }
+            }  
+        }
+    }
+
+    &.open{
+        visibility: visible;
+        opacity: 1;
+
+        .modal__box{
+            transform: scale(1);
+        }
+    }
+}

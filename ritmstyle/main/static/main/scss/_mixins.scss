@@ -1,0 +1,26 @@
+$maxWidth: 1300;
+
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+
+    $addSize: $pcSize - $mobSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+
+    @media(min-width: #{$maxWidth + px}){
+        font-size: #{$pcSize + px} ;
+    }
+    
+    @media (max-width: #{$maxWidth + px}){
+        font-size: calc(#{$mobSize + px} + #{$addSize} * (100vw / #{$maxWidth}));
+    }
+    
+    @media (max-width: 767.98px){
+        font-size: calc(#{$mobSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$maxWidth}));
+    }
+}
+
+
+
+@mixin gradient_bg($img_path){
+    background: linear-gradient(0deg, rgba(1, 138, 190, 0.45), rgba(1, 138, 190, 0.45)), url(#{$img_path}) 50%/cover no-repeat, #8E8E8E;
+}

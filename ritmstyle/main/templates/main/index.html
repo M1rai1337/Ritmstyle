@@ -1,0 +1,154 @@
+{% extends 'main/base.html' %}
+{% load static %}
+    {% block head %}
+    <script src="{% static 'main/js/lib/Swiper/Swiper.js' %}"></script>
+    <script src="{% static 'main/js/reviews-slider.js' %}" defer></script>
+    {% endblock %}
+
+    {% block main %}
+        <section class="illustration">
+            <div class="illustration__container">
+                <div class="illustration__content">
+                    <div class="illustration__info">
+                        <p class="illustration__sup-title">Укрепление здоровья</p>
+                        <h1 class="illustration__title">Акватерапия RitmStyle</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seances" id="seances">
+            <div class="seance__container">
+                <div class="seances__content">
+                    <h2 class="seances__title title"><span class="decor">Сеансы RitmStyle</span></h2>
+                    <div class="seances__row seances-row">
+                        <div class="seances-row__item seances-row-item big-item standard">
+                            <h3 class="seances-row-item__title">Стандартный RitmStyle</h3>
+                        </div>
+                        <div class="seances-row__item seances-row-item for-couples">
+                            <h3 class="seances-row-item__title">RitmStyle для пар</h3>
+                        </div>
+                        <div class="seances-row__item seances-row-item for-pregnant">
+                            <h3 class="seances-row-item__title">RitmStyle с полным погружением под воду</h3>
+                        </div>
+                        <div class="seances-row__item seances-row-item with-immersion">
+                            <h3 class="seances-row-item__title">RitmStyle для беременных</h3>
+                        </div>
+                        <div class="seances-row__item seances-row-item with-photo">
+                            <h3 class="seances-row-item__title">RitmStyle + красочная подводная фотосессия</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews" id="reviews">
+            <div class="reviews__container">
+                <div class="reviews__content">
+                    <h2 class="reviews__title title"><span class="decor">Отзывы</span></h2>
+                    <div class="reviews__slider">
+                        <div class="swiper reviews-slider">
+                            <div class="swiper-wrapper reviews-slider__wrapper">
+                                {% for review in reviews %}
+                                <div class="swiper-slide reviews-slide">
+                                    <div class="reviews-slide__wrapper">
+                                        <div class="reviews-slide__title">{{ review.reviews_client}}</div>
+                                        <div class="reviews-slide__text">
+                                            {{ review.reviews_text | linebreaks }}
+                                        </div>
+                                    </div>
+                                </div>
+                                {% endfor %}
+                            </div>
+                            <div class="reviews-pagination swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about__container">
+                <div class="about__content">
+                    <h2 class="about__title title"><span class="decor">Об RitmStyle</span></h2>
+                    <div class="about__row about-row">
+                        <div class="about-row__info about-row-info">
+                            <h3 class="about-row-info__title">RitmStyle массаж</h3>
+                            <div class="about-row-info__text">
+                                <p>С учётом сложившейся международной обстановки, начало повседневной работы по формированию позиции требует от нас анализа форм воздействия. Прежде всего, социально-экономическое развитие играет определяющее значение для системы обучения кадров, соответствующей насущным потребностям.</p>
+                                <p>Равным образом, сплочённость команды профессионалов позволяет оценить значение анализа существующих паттернов поведения. Безусловно, реализация намеченных плановых заданий позволяет выполнить важные задания по разработке соответствующих условий активизации.</p>
+                            </div>
+                        </div>
+                        <div class="about-row__img">
+                            <img src="{% static 'main/img/about/img.png' %}" alt="">
+                        </div>
+                    </div>
+                    <div class="about__row about-row">
+                        <div class="about-row__info about-row-info">
+                            <h3 class="about-row-info__title">RitmStyle гидротерапия</h3>
+                            <div class="about-row-info__text">
+                                <p>С учётом сложившейся международной обстановки, начало повседневной работы по формированию позиции требует от нас анализа форм воздействия. Прежде всего, социально-экономическое развитие играет определяющее значение для системы обучения кадров, соответствующей насущным потребностям.</p>
+                                <p>Равным образом, сплочённость команды профессионалов позволяет оценить значение анализа существующих паттернов поведения. Безусловно, реализация намеченных плановых заданий позволяет выполнить важные задания по разработке соответствующих условий активизации.</p>
+                            </div>
+                        </div>
+                        <div class="about-row__img">
+                            <img src="{% static 'main/img/about/img.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="prices">
+            <div class="prices__container">
+                <div class="prices__content">
+                    <h2 class="prices__title title"><span class="decor">Стоимость сеансов</span></h2>
+                    <div class="prices__row prices-row">
+                        <div class="prices-row__info">
+                            <ul class="prices__list prices-list">
+                                {% for service in services %}
+                                <li class="prices-list__item">
+                                    <div class="prices-list__name">{{ service.services_name }}</div>
+                                    <div class="prices-list__price">{{ service.services_price | floatformat:"-2"}}р.</div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        <div class="prices-row__img">
+                            <div class="prices-row__img-wrapper">
+                                <img src="{% static 'main/img/prices/certificate.png' %}" alt="">
+                            </div>
+                            <div class="prices-row__img-title">Подарочный сертификат</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="contacts__container">
+                <div class="contacts__content">
+                    <div class="contacts__row">
+                        <div class="contacts__map">
+                            <img src="{% static 'main/img/contacts/map.png' %}" alt="">
+                        </div>
+                        <div class="contacts__aside contacts-aside">
+                            <div class="contacts-aside__block contacts-aside-block">
+                                <h3 class="contacts-aside-block__title">Бассейн WorkClass</h3>
+                                <ul class="contacts-aside-block__list">
+                                    <li class="contacts-aside-block__item">Невский 140</li>
+                                    <li class="contacts-aside-block__item">м. Спасская</li>
+                                    <li class="contacts-aside-block__item">Запись по договоренности</li>
+                                </ul>
+                                <button class="button-2" id="button-address-1">Записаться на сеанс</button>
+                            </div>
+                            <div class="contacts-aside__block contacts-aside-block">
+                                <h3 class="contacts-aside-block__title">Бассейн "На Гороховой"</h3>
+                                <ul class="contacts-aside-block__list">
+                                    <li class="contacts-aside-block__item">3-й проезд Иванова</li>
+                                    <li class="contacts-aside-block__item">м. Крестовский остров</li>
+                                    <li class="contacts-aside-block__item">Запись по договоренности</li>
+                                </ul>
+                                <button class="button-2" id="button-address-2">Записаться на сеанс</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endblock %}

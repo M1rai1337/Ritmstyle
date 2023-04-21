@@ -1,0 +1,33 @@
+/* общие стили и стили главной страницы */
+@import '_variables';
+@import '_mixins';
+@import '_fonts';
+@import '_reset';
+@import '_common-styles';
+@import '_header';
+@import '_modal';
+@import '_form';
+@import '_illustration';
+@import '_seances';
+@import '_reviews';
+@import '_about';
+@import '_prices';
+@import '_contacts';
+@import '_footer';
+
+
+/* стлили страниц новостией */
+@import '_news';
+@import '_show-news';
+
+
+/* стрили страниц блока */
+@import '_blog';
+@import '_show-post';
+
+
+/* стили страницы cпасибо */
+@import '_thanks';
+
+/* стили страницы 404 */
+@import '_not-found';

@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load static %}
+    {% block main %}
+        <div class="line__container"></div>
+        <section class="not-found full-screen">
+            <div class="not-found__container">
+                <div class="not-found__content first-content">
+                    <h2 class="not-found__title title"><span class="decor">Страница не найдена</span></h2>
+                    <div class="not-found__info">
+                        <div class="not-found__img"><img src="{% static 'main/img/404/img.png' %}" alt=""></div>
+                        <p class="not-found__text">Упс... Кажеться что-то пошло не так.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="line__container"></div>
+    {% endblock %}
+

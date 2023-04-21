@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+{% load static %}
+    {% block main %}
+        <div class="line__container"></div>
+        <section class="thanks full-screen">
+            <div class="thanks__container">
+                <div class="thanks__content first-content">
+                    <h2 class="thanks__title title"><span class="decor">Благодарим за заявку</span></h2>
+                    <div class="thanks__info">
+                        <div class="thanks__img"><img src="{% static 'main/img/thanks/thanks.png' %}" alt=""></div>
+                        <p class="thanks__text">В ближайшее время с вами свяжутся для уточнения деталей и времени посещения!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="line__container"></div>
+    {% endblock %}
+

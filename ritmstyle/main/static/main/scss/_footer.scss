@@ -1,0 +1,20 @@
+.footer{
+    &__content{
+        padding: clamp(0.938rem, calc(0.469rem + 2.34vw), 1.875rem) 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.copy-right{
+    @include adaptiv-font(14, 12);
+    line-height: 135%;
+}
+
+.create-by{
+    @include adaptiv-font(14, 12);
+    line-height: 135%;
+    font-weight: 700;
+}

@@ -1,0 +1,36 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 40px;
+    width: 650px;
+    min-height: 100%;
+    &__errors{
+        padding-left: 8px;
+        padding-top: 5px;
+        color: #ec4f36;
+    }
+
+    select{
+        font-size: 15px;
+        border-radius: 20px;
+        padding: 8px;
+    }
+}
+
+.form-input{
+    width: 100%;
+    height: 25px;
+    border-radius: 20px;
+    padding: 16px;
+    font-size: 15px;
+
+    &::placeholder{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 761px){.form{width: 520px;}}
+@media (max-width: 601px){.form{width: 420px;}}
+@media (max-width: 491px){.form{width: 320px;}}
+@media (max-width: 391px){.form{width: 270px;}}

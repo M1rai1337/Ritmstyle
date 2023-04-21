@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+
+    {% block main %}
+        <div class="line__container"></div>
+        <section class="blog full-screen">
+            <div class="blog__container">
+                <div class="blog__content first-content">
+                    <h2 class="blog__title title"><span class="decor">Блог</span></h2>
+                        <div class="blog__wrapper">
+                        {% for post in posts%}
+                        <div class="blog-item">
+                            <div class="blog-item__img">
+                                <img src="{{post.blog_img.url}}" alt="">
+                            </div>
+                            <div class="blog-itme__info blog-item-info">
+                                <div class="blog-item-info__date"><span class="date-block date">{{ post.blog_date | date:"d.m.Y"  }}</span></div>
+                                <h3 class="blog-item-info__title">{{ post.blog_title }}</h3>
+                                <div class="blog-item-info__text">
+                                    {{ post.blog_text | linebreaks }}
+                                </div>
+                                <a href="{{ post.get_absolute_url }}" class="blog-item-info__button">Читать статью</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="line__container"></div>
+    {% endblock %}
+

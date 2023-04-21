@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+    {% block main %}
+        <div class="line__container"></div>
+        <section class="show-post full-screen">
+            <div class="show-post__container">
+                <div class="show-post__content first-content">
+                    <h2 class="show-post__title title"><span class="decor">{{ blog_post.blog_title }}</span></h2>
+                    <div class="show-post__date"><span class="date-block date">{{ blog_post.blog_date | date:"d.m.Y" }}</span></div>
+                    <div class="show-post__row">
+                        <div class="show-post__info show-post-info">
+                            <h3 class="show-post-info__title">{{ blog_post.blog_title }}</h3>
+                            <div class="show-post-info__text">{{ blog_post.blog_text | linebreaks }}</div>
+                        </div>
+                        <div class="show-post__img">
+                            <img class="show-post-img" src="{{blog_post.blog_img.url}}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="line__container"></div>
+    {% endblock %}

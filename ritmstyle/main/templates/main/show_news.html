@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+    {% block main %}
+        <div class="line__container"></div>
+        <section class="show-news full-screen">
+            <div class="show-news__container">
+                <div class="show-news__content first-content">
+                    <h2 class="show-news__title title"><span class="decor">{{ some_news.news_title }}</span></h2>
+                    <div class="show-news__date"><span class="date-block date">{{ some_news.news_date | date:"d.m.Y" }}</span></div>
+                    <div class="show-news__row">
+                        <div class="show-news__img">
+                            <img class="show-news-img" src="{{ some_news.news_img.url }}" alt="">
+                        </div>
+                        <div class="show-news__info show-news-info">
+                            <h3 class="show-news-info__title">{{ some_news.news_title }}</h3>
+                            <div class="show-news-info__text">{{ some_news.news_text | linebreaks }}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="line__container"></div>
+    {% endblock %}

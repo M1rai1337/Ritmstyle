@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@700&display=swap');
+
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/SemiBold/ProximaNova-Semibold.eot');
+    src: url('../fonts/SemiBold/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SemiBold/ProximaNova-Semibold.woff2') format('woff2'),
+        url('../fonts/SemiBold/ProximaNova-Semibold.woff') format('woff'),
+        url('../fonts/SemiBold/ProximaNova-Semibold.ttf') format('truetype'),
+        url('../fonts/SemiBold/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/Regular/ProximaNova-Regular.eot');
+    src: url('../fonts/Regular/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Regular/ProximaNova-Regular.woff2') format('woff2'),
+        url('../fonts/Regular/ProximaNova-Regular.woff') format('woff'),
+        url('../fonts/Regular/ProximaNova-Regular.ttf') format('truetype'),
+        url('../fonts/Regular/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/Light/ProximaNova-Light.eot');
+    src: url('../fonts/Light/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Light/ProximaNova-Light.woff2') format('woff2'),
+        url('../fonts/Light/ProximaNova-Light.woff') format('woff'),
+        url('../fonts/Light/ProximaNova-Light.ttf') format('truetype'),
+        url('../fonts/Light/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('../fonts/Bold/ProximaNova-Bold.eot');
+    src: url('../fonts/Bold/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bold/ProximaNova-Bold.woff2') format('woff2'),
+        url('../fonts/Bold/ProximaNova-Bold.woff') format('woff'),
+        url('../fonts/Bold/ProximaNova-Bold.ttf') format('truetype'),
+        url('../fonts/Bold/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}

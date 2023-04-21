@@ -1,0 +1,101 @@
+.blog{
+    &__title{
+        margin-bottom: clamp(0.938rem, calc(-0.402rem + 6.7vw), 3.75rem);
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+        margin-bottom: clamp(1.25rem, calc(0.06rem + 5.95vw), 3.75rem);
+    }
+}
+
+.blog-item{
+    padding: 60px 50px;
+    border: 2px solid var(---sub-color);
+    border-radius: 20px;
+    display: flex;
+    gap: 50px;
+    min-width: 100%;
+
+    &__img{
+        flex: 0 0 52%;
+        height: 430px;
+        border-radius: 10px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__info{
+        flex: 0 0 47%;
+    }
+}
+
+.blog-item-info{
+    display: flex;
+    flex-direction: column;
+    &__text{
+        flex: 1 1 auto;
+        p{
+            display: none;
+            font-weight: 300;
+            @include adaptiv-font(16, 14);
+            text-align: justify;
+
+            &:first-child{
+                display: block;
+                margin-bottom: clamp(1.75rem, calc(1.295rem + 2.27vw), 3rem);
+            }
+        }
+    }
+
+    &__title{
+        font-family: 'El Messiri';
+        font-weight: 700;
+        @include adaptiv-font(24, 18);
+        margin-bottom: clamp(1rem, calc(0.864rem + 0.68vw), 1.375rem);
+    }
+
+    &__date{
+        margin-bottom: clamp(1.125rem, calc(0.739rem + 1.93vw), 2.188rem);
+    }
+
+    &__button{
+        display: inline-block;
+        padding: 10px 20px;
+        font-weight: 700;
+        font-size: 14px;
+        color: var(---white-color);
+        background-color: var(---sub-color);
+        border-radius: 5px;
+        line-height: 130%;
+        transition: background-color .3s ease;
+        width: 140px;
+
+        @media (any-hover: hover) { &:hover{  background-color: #05668d; } }
+    }
+}
+
+
+@media (max-width: 991.98px){
+    .blog-item{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767.98px){
+    .blog-item{
+        padding: 15px;
+        gap: 35px;
+    }
+
+    .blog__wrapper{
+        gap: 18px;
+    }
+}
